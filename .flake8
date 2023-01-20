@@ -1,0 +1,6 @@
+[flake8]
+ignore = E501
+
+exclude = env
+
+max-line-lenth = 120  

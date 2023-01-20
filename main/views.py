@@ -5,14 +5,21 @@ from django.http import HttpResponseRedirect
 
 
 def main(request):
-    skills = Skill.objects.all() #queryset orm
+    skills = Skill.objects.all()  # queryset orm
 
     project = Project.objects.all()
     biography = Biography.objects.all()
     secsub = Secsub.objects.all()
     contact = Contact.objects.all()
     home = Home.objects.all()
-    return render(request, 'portfolio.html', {'skills':skills, 'project':project, 'biography':biography, 'secsub':secsub, 'contact':contact, 'home':home})
+    return render(request,
+                  'portfolio.html',
+                  {'skills': skills,
+                   'project': project,
+                   'biography': biography,
+                   'secsub': secsub,
+                   'contact': contact,
+                   'home': home})
 
 
 def message(request):

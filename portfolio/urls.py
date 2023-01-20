@@ -17,13 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from portfolio.settings import MEDIA_ROOT, MEDIA_URL
 from django.conf.urls.static import static
-from main.views import main, message #отвечает за адрес
+from main.views import main, message  # отвечает за адрес
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main, name='main'),
-    path('message/', message, name='message')
+    path('message/', message, name='message'),
 ]
 
-urlpatterns += static(MEDIA_URL, document_root = MEDIA_ROOT)
+urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
